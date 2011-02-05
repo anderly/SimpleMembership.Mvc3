@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+		<id>SimpleMembership.Mvc3</id>
+		<version>0.2</version>
+		<authors>Adam Anderly</authors>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>
+			Enables SimpleMembership API (from ASP.NET WebPages) to be used with ASP.NET MVC3. This allows you to use the WebSecurity helper found in the WebMatrix.WebData namespace.
+
+			After installation, simply add a call to WebSecurity.InitializeDatabaseConnection() in your Global.asax.cs Application_Start() method to initialize your database with the SimpleMembership tables.
+
+			This version also includes an abstraction of the WebSecurity interface (Services/IWebSecurityService) as well as an implementation of this interface (Services/WebSecurityService). This is useful for scenarios like using WebSecurity with Ninject or another IoC container to avoid hard references to WebSecurity and improve testability. To use, instead of adding the call to WebSecurity.InitializeDatabaseConnection() in Global.asax.cs, instead do this:
+
+			var webSecurityService = DependencyResolver.Current.GetService<IWebSecurityService>();
+Then, use webSecurityService.InitializeDatabaseConnection() to setup up your SimpleMembership tables.
+
+Note: This depends on WebSecurityService being registered as an IWebSecurityService with your IoC container.
+
+Currently, the package includes the actual WebMatrix.WebData.dll assembly. I'm looking into changing the package to instead use powershell to add the reference to the project if it already exists on the user machine. 
+
+Enjoy! Adam http://anderly.com
+		</description>
+		<summary>Enables SimpleMembership to be used with ASP.NET MVC3</summary>
+		<language>en-US</language>
+		<dependencies>
+			<dependency id="WebActivator" version="1.0.0.0" />
+		</dependencies>
+		<tags>SimpleMembership MVC3</tags>
+	</metadata>
+</package>
