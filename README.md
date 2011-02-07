@@ -15,8 +15,8 @@ See http://ander.ly/SimpleMembershipMvc3 for more details
 
 ## Copyright
 
-What copyright?
+Copyright 2011 Adam Anderly
 
 ## License
 
-Use it or lose it.
+License? What License?
