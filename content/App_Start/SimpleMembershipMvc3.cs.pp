@@ -3,17 +3,28 @@ using System.Configuration;
 using System.Web.Security;
 using WebMatrix.WebData;
 
-[assembly: WebActivator.PreApplicationStartMethod(typeof($rootnamespace$.AppStart_SimpleMembershipMVC3), "Start")]
+[assembly: WebActivator.PreApplicationStartMethod(typeof($rootnamespace$.App_Start.SimpleMembershipMvc3), "Start")]
+[assembly: WebActivator.PostApplicationStartMethod(typeof($rootnamespace$.App_Start.SimpleMembershipMvc3), "Initialize")]
 
-namespace $rootnamespace$
+namespace $rootnamespace$.App_Start
 {
-	public static class AppStart_SimpleMembershipMVC3
+	public static class SimpleMembershipMvc3
 	{
 		public static readonly string EnableSimpleMembershipKey = "enableSimpleMembership";
 
 		public static bool SimpleMembershipEnabled
 		{
 			get { return IsSimpleMembershipEnabled(); }
+		}
+		
+		public static void Initialize()
+		{
+			// Modify the settings below as appropriate for your application
+			WebSecurity.InitializeDatabaseConnection(connectionStringName: "Default", userTableName: "Users", userIdColumn: "ID", userNameColumn: "Username", autoCreateTables: true);
+			
+			// Comment the line above and uncomment these lines to use the IWebSecurityService abstraction
+			//var webSecurityService = DependencyResolver.Current.GetService<IWebSecurityService>();
+			//webSecurityService.InitializeDatabaseConnection(connectionStringName: "Default", userTableName: "Users", userIdColumn: "ID", userNameColumn: "Username", autoCreateTables: true);
 		}
 
 		public static void Start()
