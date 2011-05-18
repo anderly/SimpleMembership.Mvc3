@@ -2,4 +2,11 @@
 	<appSettings>
 		<add key="enableSimpleMembership" value="true"/>
 	</appSettings>
+	<system.web>
+		<compilation>
+			<assemblies>
+				<add assembly="WebMatrix.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+			</assemblies>
+		</compilation>
+	</system.web>
 </configuration>
