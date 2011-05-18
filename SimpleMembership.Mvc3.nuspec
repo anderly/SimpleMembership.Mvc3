@@ -8,8 +8,6 @@
 		<description>
 			Enables SimpleMembership API (from ASP.NET WebPages) to be used with ASP.NET MVC3. This allows you to use the WebSecurity helper found in the WebMatrix.WebData namespace.
 			
-			See SimpleMembership.Mvc3.Sample package for sample Mvc3 project using SimpleMembership.Mvc3.
-			
 			See http://ander.ly/SimpleMembershipMvc3 for "readme" instructions.
 		</description>
 		<projectUrl>https://github.com/anderly/SimpleMembership.Mvc3</projectUrl>
