@@ -6,7 +6,6 @@ SimpleMembership.Mvc3 enables the SimpleMembership API from WebMatrix/WebPages (
 
 * Includes a web activator and web.config transforms that enable the SimpleMembershipProvider
 * Includes an abstraction of the WebSecurity helper (IWebSecurityService) and an implementation (WebSecurityService) to enable use with DI/IoC frameworks such as NInject, etc.
-* Includes a SimpleMembershipAccountController which can be used as a drop-in replacement for the default AccountController in new MVC projects. This controller uses the included WebSecurityService instead of the FormsAuthenticationService and MembershipService for authentication and membership.
 
 ## Usage
 
