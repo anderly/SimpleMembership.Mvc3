@@ -2,13 +2,15 @@
 <package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 		<id>SimpleMembership.Mvc3</id>
-		<version>1.1</version>
+		<version>1.2</version>
 		<authors>Adam Anderly</authors>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>
 			Enables SimpleMembership API (from ASP.NET WebPages) to be used with ASP.NET MVC3. This allows you to use the WebSecurity helper found in the WebMatrix.WebData namespace.
+
+SimpleMembership contains all the features you wish the default membership provider had: account confirmation tokens, password reset tokens, etc.			
 			
-			See http://ander.ly/SimpleMembershipMvc3 for "readme" instructions.
+See http://ander.ly/SimpleMembershipMvc3 for "readme" instructions.
 		</description>
 		<projectUrl>https://github.com/anderly/SimpleMembership.Mvc3</projectUrl>
 		<summary>Enables SimpleMembership to be used with ASP.NET MVC3</summary>
